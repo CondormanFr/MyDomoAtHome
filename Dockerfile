@@ -23,4 +23,6 @@ RUN cd MyDomoAtHome && carton install --deployment
 EXPOSE 3002
 
 WORKDIR MyDomoAtHome
-CMD carton exec starman --port 3002 bin/app.pl
+# Set the default command to execute
+# when creating a new container
+CMD ["carton", "exec starman --port 3002 bin/app.pl"]
