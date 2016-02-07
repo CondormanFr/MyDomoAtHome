@@ -19,11 +19,11 @@ RUN apt-get -y install libaudio-mpd-perl libnet-upnp-perl libpoe-component-clien
 RUN cachebuster=0a2ffc7 git clone http://github.com/empierre/MyDomoAtHome.git
 #RUN cd MyDomoAtHome && bash run-once.sh
 RUN cd MyDomoAtHome
-RUN carton install --deployment
+#rUN carton install --deployment
 
 EXPOSE 3002
 
 WORKDIR MyDomoAtHome
 # Set the default command to execute
 # when creating a new container
-CMD ["carton", "exec starman --port 3002 bin/app.pl"]
+#CMD ["carton", "exec starman --port 3002 bin/app.pl"]
