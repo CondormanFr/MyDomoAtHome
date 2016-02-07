@@ -3,6 +3,7 @@
 FROM ubuntu:latest
 MAINTAINER Romain GOUYET "docker@gouyet.com"
 USER root
+
 RUN apt-get update
 RUN apt-get -y install curl make gcc git
 RUN curl -L http://cpanmin.us | perl - App::cpanminus
